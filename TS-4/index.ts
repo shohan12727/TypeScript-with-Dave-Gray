@@ -207,6 +207,97 @@ console.log(person);
 
 
 
+class Person2 {
+  private name: string;
+
+  
+  public constructor (name: string) {
+    this.name = name;
+  }
+
+  public getName(): string {
+    return this.name;
+  }
+
+}
+
+const person2 = new Person2('Shawon')
+
+
+console.log(person2);
+
+
+
+
+
+
+class Car {
+  brand: string;
+
+  constructor(brand: string){
+    this.brand = brand;
+  }
+}
+const myCar = new Car("Toyota")
+console.log(myCar.brand);
+
+
+
+class User {
+  name: string;
+  email: string;
+  status: boolean;
+  
+  constructor (name: string, email: string, status: boolean){
+    this.name = name; 
+    this.email = email;
+    this.status= status;
+  }
+}
+
+const user1 = new User("Rajesh", "rajesh@gmail.com", true)
+console.log(user1);
+console.log(user1.name);
+console.log(user1.email);
+console.log(user1.status);
+
+
+
+
+
+
+
+class Circle {
+  radius: number;
+  constructor(radius: number) {
+    this.radius = radius;
+  }
+  getArea(): number {
+    return 3.1416 * this.radius * this.radius ;
+  }
+  getCircumference(): number{
+    return 2 * 3.1416 * this.radius
+  }
+}
+const myCircle = new Circle(5);
+console.log(myCircle);
+console.log(myCircle.getArea());
+console.log(myCircle.getCircumference());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

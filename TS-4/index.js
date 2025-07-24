@@ -101,3 +101,51 @@ var Person = /** @class */ (function () {
 var person = new Person();
 person.name = 'Shohan';
 console.log(person);
+var Person2 = /** @class */ (function () {
+    function Person2(name) {
+        this.name = name;
+    }
+    Person2.prototype.getName = function () {
+        return this.name;
+    };
+    return Person2;
+}());
+var person2 = new Person2('Shawon');
+console.log(person2);
+var Car = /** @class */ (function () {
+    function Car(brand) {
+        this.brand = brand;
+    }
+    return Car;
+}());
+var myCar = new Car("Toyota");
+console.log(myCar.brand);
+var User = /** @class */ (function () {
+    function User(name, email, status) {
+        this.name = name;
+        this.email = email;
+        this.status = status;
+    }
+    return User;
+}());
+var user1 = new User("Rajesh", "rajesh@gmail.com", true);
+console.log(user1);
+console.log(user1.name);
+console.log(user1.email);
+console.log(user1.status);
+var Circle = /** @class */ (function () {
+    function Circle(radius) {
+        this.radius = radius;
+    }
+    Circle.prototype.getArea = function () {
+        return 3.1416 * this.radius * this.radius;
+    };
+    Circle.prototype.getCircumference = function () {
+        return 2 * 3.1416 * this.radius;
+    };
+    return Circle;
+}());
+var myCircle = new Circle(5);
+console.log(myCircle);
+console.log(myCircle.getArea());
+console.log(myCircle.getCircumference());
