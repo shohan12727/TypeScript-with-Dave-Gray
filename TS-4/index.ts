@@ -130,4 +130,88 @@ console.log("The height of the ractangle is:",ractangle.height);
 
 
 
+
+function printStatusCode (code: string | number){
+  console.log(`my status code is ${code}`);
+}
+
+printStatusCode('404')
+printStatusCode(404)
+
+
+
+function getTime(): number {
+  return new Date().getTime();
+}
+
+console.log(getTime());
+
+const start = getTime();
+for (let i = 0; i < 1_000_000; i++) {
+  Math.sqrt(i); // some expensive operation
+}
+const end = getTime();
+console.log(`Time taken: ${end - start} ms`);
+
+
+
+
+
+function printHello(): void {
+  console.log("Hello!"); 
+}
+
+printHello();
+
+
+
+
+
+function multiply (a: number, b: number):number {
+  return a*b;
+}
+
+console.log(multiply(22, 2));
+
+
+
+
+
+
+
+
+
+function pow(value: number, exponent: number = 10){
+  return value ** exponent;
+}
+
+console.log(pow(5,2));
+
+
+
+
+let x: unknown = 'Hello';
+console.log((x as string).length);
+
+
+
+
+
+class Person {
+  name: string;
+}
+
+const person = new Person();
+person.name = 'Shohan';
+console.log(person);
+
+
+
+
+
+
+
+
+
+
 export { }

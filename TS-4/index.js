@@ -63,3 +63,41 @@ var ractangle = {
 };
 console.log("The width of the ractangle is:", ractangle.width);
 console.log("The height of the ractangle is:", ractangle.height);
+function printStatusCode(code) {
+    console.log("my status code is ".concat(code));
+}
+printStatusCode('404');
+printStatusCode(404);
+function getTime() {
+    return new Date().getTime();
+}
+console.log(getTime());
+var start = getTime();
+for (var i = 0; i < 1000000; i++) {
+    Math.sqrt(i); // some expensive operation
+}
+var end = getTime();
+console.log("Time taken: ".concat(end - start, " ms"));
+function printHello() {
+    console.log("Hello!");
+}
+printHello();
+function multiply(a, b) {
+    return a * b;
+}
+console.log(multiply(22, 2));
+function pow(value, exponent) {
+    if (exponent === void 0) { exponent = 10; }
+    return Math.pow(value, exponent);
+}
+console.log(pow(5, 2));
+var x = 'Hello';
+console.log(x.length);
+var Person = /** @class */ (function () {
+    function Person() {
+    }
+    return Person;
+}());
+var person = new Person();
+person.name = 'Shohan';
+console.log(person);
