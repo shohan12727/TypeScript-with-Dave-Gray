@@ -76,3 +76,26 @@ console.log(acc1);
 console.log(acc1.balance);
 acc1.balance = -82585;
 console.log(acc1.balance);
+
+
+
+
+
+
+
+
+
+//----------------------------------
+
+
+let studentData: string =` {
+    "studentName": "Rajesh Sarkar",
+    "studentID": 251318569,
+    "studentCourse": "EEE"
+}`
+
+let maleStudent: any= JSON.parse(studentData);
+
+// console.log(maleStudent.studentName);
+
+
