@@ -2,6 +2,21 @@
 /**
  * Encapsulation: Encapsulation means hiding the internal details of how something works and only showing what is necessary to the outside .
  */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 var User = /** @class */ (function () {
     function User(userName, password) {
@@ -65,3 +80,31 @@ var LibraryBook = /** @class */ (function () {
 var book = new LibraryBook("1991", "George Orwell", false);
 console.log(book.getStatus());
 book.checkOut();
+var Shape = /** @class */ (function () {
+    function Shape(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    // method to describe the shape
+    Shape.prototype.describe = function () {
+        console.log("This is a shpae at positon (".concat(this.x, ", ").concat(this.y, ")"));
+    };
+    return Shape;
+}());
+// derived class representing a circle
+var Circle = /** @class */ (function (_super) {
+    __extends(Circle, _super);
+    function Circle(x, y, radius) {
+        var _this = _super.call(this, x, y) || this;
+        _this.radius = radius;
+        return _this;
+    }
+    Circle.prototype.area = function () {
+        return Math.PI * Math.pow(this.radius, 2);
+    };
+    return Circle;
+}(Shape));
+var shape1 = new Shape(10, 20);
+shape1.describe();
+var circle1 = new Circle(5, 10, 20);
+console.log(circle1.area());

@@ -75,8 +75,8 @@ class LibraryBook {
 
 
   // method to return book 
-  returnBook():void {
-    if (this.isCheckedOut){
+  returnBook(): void {
+    if (this.isCheckedOut) {
       this.isCheckedOut = false;
       console.log(`You have already returned "${this.title}", Thank you!`);
     } else {
@@ -98,8 +98,47 @@ book.checkOut();
 
 
 
+class Shape {
+  x: number;
+  y: number;
 
 
+  constructor(x: number, y: number) {
+    this.x = x;
+    this.y = y;
+  }
+
+  // method to describe the shape
+  describe(): void {
+    console.log(`This is a shpae at positon (${this.x}, ${this.y})`);
+  }
+}
+
+// derived class representing a circle
+
+class Circle extends Shape {
+  radius: number;
+
+  constructor(x: number, y: number, radius: number) {
+    super(x, y);
+    this.radius = radius;
+  }
+
+  area(): number {
+    return Math.PI * this.radius ** 2;
+  }
+}
+
+
+const shape1 = new Shape(10,20);
+shape1.describe();
+
+const circle1 = new Circle(5,10,20)
+console.log(circle1.area());
+
+
+
+//--------------------------------------
 
 
 
