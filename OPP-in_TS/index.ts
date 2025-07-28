@@ -130,10 +130,10 @@ class Circle extends Shape {
 }
 
 
-const shape1 = new Shape(10,20);
+const shape1 = new Shape(10, 20);
 shape1.describe();
 
-const circle1 = new Circle(5,10,20)
+const circle1 = new Circle(5, 10, 20)
 console.log(circle1.area());
 
 
@@ -156,13 +156,13 @@ class TV extends Device {
   }
 }
 
-class AC extends Device{
+class AC extends Device {
   turnOn(): void {
     console.log("AC is turing on...............");
   }
 }
 
-class projector extends Device{
+class projector extends Device {
   turnOn(): void {
     console.log("projector is turing on......");
   }
@@ -179,53 +179,111 @@ devices.forEach(device => device.turnOn())
 
 
 class Car {
-  private brand: string ;
+  private brand: string;
   private model: string;
   private speed: number;
-  constructor(brand: string, model:string){
+  constructor(brand: string, model: string) {
     this.brand = brand;
     this.model = model;
     this.speed = 0;
   }
-  public accelerate():void{
+  public accelerate(): void {
     this.speed += 10;
   }
-  public brake(): void{
+  public brake(): void {
     this.speed += 10;
   }
-  public getSpeed():number{
+  public getSpeed(): number {
     return this.speed;
   }
 }
-const myCar: Car = new Car("Toyota","Camry");
+const myCar: Car = new Car("Toyota", "Camry");
 myCar.accelerate();
 
 console.log("Current speed", myCar.getSpeed());
 
 
 
+// function longestCommonPrefix(strs: string[]): string {
+//   if (strs.length === 0) return "";
+
+//   Loop through each character of the first string
+//   for (let i = 0; i < strs[0].length; i++) {
+//     const char = strs[0][i];
+
+//     Compare this character with the same position in the other strings
+//     for (let j = 1; j < strs.length; j++) {
+//       If mismatch found or string is shorter, return the prefix so far
+//       if (i >= strs[j].length || strs[j][i] !== char) {
+//         return strs[0].substring(0, i);
+//       }
+//     }
+//   }
+
+//   If loop completes, the entire first string is the common prefix
+//   return strs[0];
+// }
+
+
+
+
+// problem : const words = ["apple", "banana", "grape"];
+//  Write a TypeScript function that logs the first character of each string in the array.
+
+// what i will learn 
+// The first [] accesses the string in the array.
+// The second [] accesses the character in that string.
+
+const fruits = ["apple", "banana", "grape"];
+
+function firstLogCharactars(arr: string[]): void {
+  for (let i = 0; i < arr.length; i++) {
+    const firstChar = arr[i][0];
+    console.log(`first charactars of ${arr[i]} is: ${firstChar}`);
+  }
+}
+// firstLogCharactars(fruits);
 
 
 
 
 
+const people = ["Shohan", "Rajesh", "Simanto", "Rudro", "Shafiq", "Sajib", "Mujahid"];
+
+function getFirstLetter(arr: string[]): void {
+
+  for (let i = 0; i < arr.length; i++) {
+
+    const firstLetter = arr[i][0];
+
+    console.log(`First charater of ${arr[i]} is: ${firstLetter}`);
+  }
+}
+// getFirstLetter(people);
 
 
 
+const cities = ["Dhaka", "Chattogram", "Rajshahi", "Khulna", "Barishal", "Sylhet", "Rangpur"];
+
+
+function loopCity(arr: string[]): void {
+  for (let i = 0; i < arr.length; i++) {
+    const singleCity = arr[i];
+    console.log(singleCity);
+  }
+}
+// loopCity(cities)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+function findLastWord(arr: string[]): void {
+  for(let i = 0; i < arr.length; i++){
+    const lastWord = arr[i][arr[i].length -1];
+    console.log(lastWord);
+    
+  }
+}
+findLastWord(cities);
 
 
 

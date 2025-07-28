@@ -171,3 +171,55 @@ var Car = /** @class */ (function () {
 var myCar = new Car("Toyota", "Camry");
 myCar.accelerate();
 console.log("Current speed", myCar.getSpeed());
+// function longestCommonPrefix(strs: string[]): string {
+//   if (strs.length === 0) return "";
+//   Loop through each character of the first string
+//   for (let i = 0; i < strs[0].length; i++) {
+//     const char = strs[0][i];
+//     Compare this character with the same position in the other strings
+//     for (let j = 1; j < strs.length; j++) {
+//       If mismatch found or string is shorter, return the prefix so far
+//       if (i >= strs[j].length || strs[j][i] !== char) {
+//         return strs[0].substring(0, i);
+//       }
+//     }
+//   }
+//   If loop completes, the entire first string is the common prefix
+//   return strs[0];
+// }
+// problem : const words = ["apple", "banana", "grape"];
+//  Write a TypeScript function that logs the first character of each string in the array.
+// what i will learn 
+// The first [] accesses the string in the array.
+// The second [] accesses the character in that string.
+var fruits = ["apple", "banana", "grape"];
+function firstLogCharactars(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        var firstChar = arr[i][0];
+        console.log("first charactars of ".concat(arr[i], " is: ").concat(firstChar));
+    }
+}
+// firstLogCharactars(fruits);
+var people = ["Shohan", "Rajesh", "Simanto", "Rudro", "Shafiq", "Sajib", "Mujahid"];
+function getFirstLetter(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        var firstLetter = arr[i][0];
+        console.log("First charater of ".concat(arr[i], " is: ").concat(firstLetter));
+    }
+}
+// getFirstLetter(people);
+var cities = ["Dhaka", "Chattogram", "Rajshahi", "Khulna", "Barishal", "Sylhet", "Rangpur"];
+function loopCity(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        var singleCity = arr[i];
+        console.log(singleCity);
+    }
+}
+// loopCity(cities)
+function findLastWord(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        var lastWord = arr[i][arr[i].length - 1];
+        console.log(lastWord);
+    }
+}
+findLastWord(cities);
