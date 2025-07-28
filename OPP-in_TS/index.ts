@@ -141,9 +141,66 @@ console.log(circle1.area());
 //--------------------------------------
 
 
+// Polymorphism 
+
+
+class Device {
+  turnOn(): void {
+    console.log("Device is turning on..........");
+  }
+}
+
+class TV extends Device {
+  turnOn(): void {
+    console.log("Tv is turning one ..............");
+  }
+}
+
+class AC extends Device{
+  turnOn(): void {
+    console.log("AC is turing on...............");
+  }
+}
+
+class projector extends Device{
+  turnOn(): void {
+    console.log("projector is turing on......");
+  }
+}
+const devices: Device[] = [new TV(), new AC(), new projector()];
+
+devices.forEach(device => device.turnOn())
 
 
 
+
+
+//Abstraction means focusing on what an object does in strad of how it does (like: driving a car without knowing engine mechinics)
+
+
+class Car {
+  private brand: string ;
+  private model: string;
+  private speed: number;
+  constructor(brand: string, model:string){
+    this.brand = brand;
+    this.model = model;
+    this.speed = 0;
+  }
+  public accelerate():void{
+    this.speed += 10;
+  }
+  public brake(): void{
+    this.speed += 10;
+  }
+  public getSpeed():number{
+    return this.speed;
+  }
+}
+const myCar: Car = new Car("Toyota","Camry");
+myCar.accelerate();
+
+console.log("Current speed", myCar.getSpeed());
 
 
 

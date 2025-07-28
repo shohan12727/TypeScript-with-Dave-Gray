@@ -108,3 +108,66 @@ var shape1 = new Shape(10, 20);
 shape1.describe();
 var circle1 = new Circle(5, 10, 20);
 console.log(circle1.area());
+//--------------------------------------
+// Polymorphism 
+var Device = /** @class */ (function () {
+    function Device() {
+    }
+    Device.prototype.turnOn = function () {
+        console.log("Device is turning on..........");
+    };
+    return Device;
+}());
+var TV = /** @class */ (function (_super) {
+    __extends(TV, _super);
+    function TV() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    TV.prototype.turnOn = function () {
+        console.log("Tv is turning one ..............");
+    };
+    return TV;
+}(Device));
+var AC = /** @class */ (function (_super) {
+    __extends(AC, _super);
+    function AC() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    AC.prototype.turnOn = function () {
+        console.log("AC is turing on...............");
+    };
+    return AC;
+}(Device));
+var projector = /** @class */ (function (_super) {
+    __extends(projector, _super);
+    function projector() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    projector.prototype.turnOn = function () {
+        console.log("projector is turing on......");
+    };
+    return projector;
+}(Device));
+var devices = [new TV(), new AC(), new projector()];
+devices.forEach(function (device) { return device.turnOn(); });
+//Abstraction means focusing on what an object does in strad of how it does (like: driving a car without knowing engine mechinics)
+var Car = /** @class */ (function () {
+    function Car(brand, model) {
+        this.brand = brand;
+        this.model = model;
+        this.speed = 0;
+    }
+    Car.prototype.accelerate = function () {
+        this.speed += 10;
+    };
+    Car.prototype.brake = function () {
+        this.speed += 10;
+    };
+    Car.prototype.getSpeed = function () {
+        return this.speed;
+    };
+    return Car;
+}());
+var myCar = new Car("Toyota", "Camry");
+myCar.accelerate();
+console.log("Current speed", myCar.getSpeed());
