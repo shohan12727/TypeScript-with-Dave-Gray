@@ -22,7 +22,39 @@ function longestCommonPrefix(str: string[]): string {
 
   return prefix;
 }
-console.log(longestCommonPrefix(strs));
+// console.log(longestCommonPrefix(strs));
+
+
+
+
+function isPalindrone (x: number): boolean {
+  const str = x.toString();
+
+  for(let i = 0; i < Math.floor(str.length / 2); i++) {
+    if(str[i] !== str[str.length -1 -i]){
+      return  false ;
+    }
+
+  }
+  return true;
+}
+
+console.log(isPalindrone(121));
+console.log(isPalindrone(-121));
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 export { }

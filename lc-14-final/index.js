@@ -17,4 +17,15 @@ function longestCommonPrefix(str) {
     }
     return prefix;
 }
-console.log(longestCommonPrefix(strs));
+// console.log(longestCommonPrefix(strs));
+function isPalindrone(x) {
+    var str = x.toString();
+    for (var i = 0; i < Math.floor(str.length / 2); i++) {
+        if (str[i] !== str[str.length - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(isPalindrone(121));
+console.log(isPalindrone(-121));
